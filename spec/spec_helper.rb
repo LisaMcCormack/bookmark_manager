@@ -11,7 +11,7 @@
 # a separate helper file that requires the additional dependencies and performs
 # the additional setup, and require it from the spec files that actually need
 # it.
-# 
+#
 
 require 'capybara/rspec'
 require 'simplecov'
@@ -21,9 +21,6 @@ require_relative './setup_test_database'
 ENV['RACK_ENV'] = 'test'
 require File.join(File.dirname(__FILE__), '../app', 'app.rb')
 
-
-require 'capybara'
-require 'rspec'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
